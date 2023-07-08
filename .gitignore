@@ -1,0 +1,17 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Mac OS X
+.DS_Store
+._.*
+._*
+
+# Ignore local editor
+.settings
+.vscode
+
+tutorial_git.txt
+tutorial_verstka.txt
+style-order.png
+
+dist/
+node_modules/
