@@ -1,10 +1,13 @@
-@import url("./_reset.scss");
-@import url("./_fonts.scss");
+@import "./_reset.scss";
+@import "./_fonts.scss";
+@import "./variables.scss";
 
 html {
 	font-size: 10px;
 	font-family: "Montserrat", sans-serif;
 }
 
-@import url("./blocks/_sprite.scss");
-@import url("./blocks/_navigation.scss");
+@import "./blocks/_sprite.scss";
+@import "./blocks/_navigation.scss";
+@import "./blocks/_promo.scss";
+@import "./blocks/clients.scss";

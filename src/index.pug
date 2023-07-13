@@ -1,11 +1,53 @@
+include ./pug/templates/variables.pug
+include ./pug/templates/m-head.pug
+include ./pug/templates/m-footer.pug
+include ./pug/templates/m-common.pug
+
 doctype html
 html(lang="en")
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1.0")
-		link(rel="stylesheet", href="./css/main.min.css")
-		title Document
+	+head('UI/UX design')
 	body
-		.wrapper Businesses For
-			svg.svg_class 
-				use(xlink:href="./assets/icons/sprite.svg#linked")
+		nav.navigation
+			+svg_icon("logo", "navigation__logo")
+			ul.navigation__menu 
+				li.navigation__menu_item How it works
+				li.navigation__menu_item About
+				li.navigation__menu_item Work
+				li.navigation__menu_item Pricing
+				li.navigation__menu_item Blog
+			a.navigation__btn(href="#") get started
+		.menu__switcher(aria-label="menu switcher")
+				span.menu__switcher_span
+				span.menu__switcher_span
+				span.menu__switcher_span
+		section.promo
+			h2.promo__title A UI/UX design subscription so #[span.promo__title_span good] it should come with a #[span.promo__title_span warning] label
+			.promo__triggers 
+				.promo__triggers_item No hiring headaches
+				.promo__triggers_item Weekly turnaround times
+				.promo__triggers_item One flat monthly rate
+			a.promo__button(href="#") start your risk free trial
+		section.clients 
+			h2.clients__title We helped our customers raise #[span.clients__title_span $1B+]
+			.clients__list
+				.clients__list_item #[img(src='./assets/images/client1.png')]
+				.clients__list_item #[img(src='./assets/images/client2.png')]
+				.clients__list_item #[img(src='./assets/images/client3.png')]
+				.clients__list_item #[img(src='./assets/images/client4.png')]
+		section.advantage
+			h2.advantage__title A diverse team of #[span.advantage__span passionate] UX nerds who are here to help your #[span.advantage__span startup succeed]
+			.advantage__description From ideation to expansion, TDP understands the unique demands of your startup—providing you with optimized design strategies and fast turnarounds for an affordable monthly subscription.
+			.advantage__triggers
+				.advantage__triggers_item 
+					+svg_icon("cost", "advantage__triggers_icon")
+					h4.advantage__triggers_subtitle Costs 70% less
+					.advantage__triggers_description We developed highly-optimized design processes to let us work fast and deliver incredible results—and we pass those savings on to you
+				.advantage__triggers_item 
+					+svg_icon("scale", "advantage__triggers_icon")
+					h4.advantage__triggers_subtitle Adaptable and scalable
+					.advantage__triggers_description High-velocity is crucial to a startup’s success, and that’s why TDP delivers new designs every week so your momentum never falters
+				.advantage__triggers_item 
+					+svg_icon("turn", "advantage__triggers_icon")
+					h4.advantage__triggers_subtitle Fast turnaround times
+					.advantage__triggers_description TDP was built for flexibility—we quickly adapt and grow as you grow
+		+footer

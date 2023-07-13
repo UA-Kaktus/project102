@@ -1,0 +1,173 @@
+.promo {
+	box-sizing: border-box;
+	height: 81rem;
+	padding-top: 15rem;
+
+	background: url("./../assets/images/girl.png") left 38% bottom -1rem / 30rem,
+		url("./../assets/images/afro.png") center bottom -1rem / 27rem,
+		url("./../assets/images/grand.png") left 63% bottom -1rem / 20rem,
+		url("./../assets/images/mex.png") left 72% bottom -1rem / 14rem,
+		url("./../assets/images/afro2.png") left 28% bottom -1rem / 16rem, #e0eaf3;
+	background-repeat: no-repeat;
+
+	&__title {
+		display: block;
+		width: 100rem;
+		margin: 0 auto;
+		box-sizing: border-box;
+
+		font-size: 5rem;
+		font-weight: 700;
+		color: $dark-color;
+		line-height: 5.4rem;
+		text-transform: capitalize;
+	}
+
+	&__title_span {
+		color: $orange-color;
+	}
+
+	&__triggers {
+		display: flex;
+		justify-content: center;
+		column-gap: 4rem;
+		margin-top: 3rem;
+		padding: 0.6rem 3rem;
+	}
+
+	&__triggers_item {
+		position: relative;
+
+		padding-left: 3.4rem;
+
+		color: $black-color;
+		font-size: 1.8rem;
+		font-weight: 700;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 50%;
+
+			display: flex;
+			content: "\2713";
+			width: 2.6rem;
+			height: 2.6rem;
+			justify-content: center;
+			align-items: center;
+
+			font-size: 1.6rem;
+			color: $orange-color;
+
+			border: 2px solid $orange-color;
+			border-radius: 100%;
+
+			transform: translateY(-50%);
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 30rem;
+		height: 4.6rem;
+		margin: 1.2rem auto 0;
+		box-sizing: border-box;
+
+		color: $white-color;
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		background: $orange-color;
+		border-radius: 1.6rem;
+		border: solid 2px $orange-color;
+
+		transition: 0.3s;
+
+		&:hover {
+			color: $orange-color;
+			background-color: transparent;
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 36% bottom -1rem / 30rem,
+			url("./../assets/images/afro.png") center bottom -1rem / 27rem,
+			url("./../assets/images/grand.png") left 63% bottom -1rem / 20rem,
+			url("./../assets/images/mex.png") left 72% bottom -1rem / 14rem,
+			url("./../assets/images/afro2.png") left 24% bottom -1rem / 16rem, #e0eaf3;
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: 1200px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 34% bottom -1rem / 28rem,
+			url("./../assets/images/afro.png") center bottom -1rem / 25rem,
+			url("./../assets/images/grand.png") left 65% bottom -1rem / 18rem,
+			url("./../assets/images/mex.png") left 76% bottom -1rem / 12rem,
+			url("./../assets/images/afro2.png") left 20% bottom -1rem / 14rem, #e0eaf3;
+		background-repeat: no-repeat;
+
+		&__title {
+			font-size: 4.4rem;
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 30% bottom -1rem / 28rem,
+			url("./../assets/images/afro.png") center bottom -1rem / 25rem,
+			url("./../assets/images/grand.png") left 70% bottom -1rem / 18rem, #e0eaf3;
+		background-repeat: no-repeat;
+
+		&__title {
+			width: 100%;
+			padding: 0 3rem;
+			font-size: 3.2rem;
+			line-height: 3.2rem;
+		}
+
+		&__triggers {
+			flex-wrap: wrap;
+			row-gap: 1.6rem;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 20% bottom -1rem / 28rem,
+			url("./../assets/images/afro.png") center bottom -1rem / 25rem,
+			url("./../assets/images/grand.png") left 80% bottom -1rem / 18rem, #e0eaf3;
+		background-repeat: no-repeat;
+		padding-top: 12rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 30% bottom -1rem / 28rem,
+			url("./../assets/images/afro.png") left 70% bottom -1rem / 25rem, #e0eaf3;
+		background-repeat: no-repeat;
+
+		&__title {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+@media (max-width: 425px) {
+	.promo {
+		background: url("./../assets/images/girl.png") left 12% bottom -1rem / 25rem,
+			url("./../assets/images/afro.png") left 88% bottom -1rem / 22rem, #e0eaf3;
+		background-repeat: no-repeat;
+	}
+}

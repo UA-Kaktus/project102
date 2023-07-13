@@ -1,0 +1,145 @@
+.navigation {
+	position: fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10rem;
+	width: 100%;
+	padding: 1rem;
+	box-sizing: border-box;
+
+	font-size: 1.4rem;
+
+	background-color: #e0eaf3;
+
+	transition: 0.7s;
+
+	&__logo {
+		width: 4rem;
+		height: 3.4rem;
+
+		fill: $orange-color;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		gap: 2.8rem;
+	}
+
+	&__menu_item {
+		padding: 4px;
+
+		color: $black-color;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		&:hover {
+			color: $orange-color;
+			cursor: pointer;
+			transition: 0.3s;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 16rem;
+		height: 4.6rem;
+		box-sizing: border-box;
+
+		color: $white-color;
+		font-size: 1.6rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+
+		background: $orange-color;
+		border-radius: 1rem;
+		border: solid 2px $orange-color;
+
+		transition: 0.3s;
+
+		&:hover {
+			color: $orange-color;
+			background-color: transparent;
+		}
+	}
+}
+
+.menu__switcher {
+	position: fixed;
+	top: 2rem;
+	right: 2rem;
+	z-index: 5;
+
+	display: none;
+	flex-direction: column;
+	width: 3rem;
+	gap: 0.6rem;
+
+	cursor: pointer;
+}
+
+.menu__switcher_active {
+	span:first-of-type {
+		transform: rotate(45deg) translate(9px, 7px);
+	}
+	span:nth-of-type(2) {
+		display: none;
+	}
+	span:nth-of-type(3) {
+		transform: rotate(-45deg) translate(0px, 2px);
+	}
+}
+
+.menu__switcher_span {
+	display: block;
+	width: 3rem;
+	height: 4px;
+
+	background-color: $orange-color;
+
+	transition: 0.3s;
+}
+
+@media (max-width: 992px) {
+	.navigation {
+		gap: 5rem;
+
+		&__menu {
+			gap: 2rem;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.menu__switcher {
+		display: flex;
+	}
+
+	.navigation {
+		position: fixed;
+		left: -30rem;
+		z-index: 4;
+
+		height: 100vh;
+		width: 25rem;
+		padding: 10rem 0 0 5rem;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		background-color: rgba($color: $white-color, $alpha: 0.95);
+		box-shadow: 5px 0 25px rgba($color: #919191, $alpha: 0.5);
+
+		&__menu {
+			flex-direction: column;
+		}
+	}
+}
